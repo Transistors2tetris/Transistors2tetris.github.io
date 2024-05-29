@@ -1346,10 +1346,9 @@ input, select, textarea {
 			  }
 			  
 			  #header nav ul li {
-				flex-grow: 0; /* Do not grow larger than content */
-				flex-shrink: 0; /* Do not shrink smaller than content */
+				display: inline-block;
 				border-left: solid 1px #ffffff;
-				text-align: center; /* Centers the text within each li */
+				text-align: center;
 			  }
 			  
 
