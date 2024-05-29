@@ -57,38 +57,55 @@ ALICE V3 DOCUMENTATION WEBSITE.
 									Constructed using 2000 relays, it featured a 22-bit word length and operated at a clock frequency of approximately 5–10 Hz. Program code and data for the Z3 were stored on punched film. This pioneering machine was completed in Berlin in 1941.	</p>
 								<h2>VACUUM TUBES</h2>
 								<span class="image main"><img src="images/Asset 4.png" alt="Zuse Z3" /></span>
-								<p>The early 20th century saw the advent of electromechanical computers using relays, which are switches operated by electrical currents. One notable example is the Zuse Z3, developed by Konrad Zuse in 1941. The Z3 was the world's first programmable computer, using relays to perform arithmetic operations and data storage.
-										Constructed using 2000 relays, it featured a 22-bit word length and operated at a clock frequency of approximately 5–10 Hz. Program code and data for the Z3 were stored on punched film. This pioneering machine was completed in Berlin in 1941.	</p>
+								<p>The introduction of vacuum tubes marked a significant leap in computing technology. Vacuum tubes could amplify electrical signals and switch them on and off, functioning as electronic switches. The ENIAC (Electronic Numerical Integrator and Computer), completed in 1945, was the first general-purpose electronic computer. It used approximately 18,000 vacuum tubes and could perform complex calculations at unprecedented speeds. However, vacuum tubes were bulky, consumed a lot of power, and were prone to failure.	</p>
+							<h2>TRANSISTORS</h2>
+								<span class="image main"><img src="images/TRANSISTORS.jpg" alt="Zuse Z3" /></span>
+								<p>The invention of the transistor in 1947 by John Bardeen, Walter Brattain, and William Shockley at Bell Labs revolutionized the field of electronics and computing. Transistors are semiconductor devices that can amplify and switch electronic signals. They are smaller, more reliable, and more energy-efficient than vacuum tubes.
+
+									Transistors enabled the development of smaller, faster, and more powerful computers. The IBM 1401, introduced in 1959, was one of the first computers to use transistors, offering improved performance and reliability over its vacuum tube predecessors. The integration of transistors into circuits led to the creation of integrated circuits (ICs), where multiple transistors and other components are fabricated onto a single silicon chip.</p>
 							</article>
 
 						<!-- Work -->
 							<article id="transistors">
-								<h2 class="major">voice interactions</h2>
-								<div style="display: flex; justify-content: center">
-									<dotlottie-player src="https://lottie.host/b18f8fea-249f-4128-a124-3fe707436ba8/J4xyE6Nz3M.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-								  </div>
-								  <h2>Wake word detection</h2>
-								<p>Within the ALICE system, a vital component known as the wake word (“ALICE”,”Hey ALICE”) serves as the trigger for initiating a conversation with the voice assistant. This wake word acts as a specific term or phrase that prompts the system to become active and establish communication with the user. To achieve this functionality, a dedicated process within ALICE continuously monitors and analyzes an ongoing stream of audio input, specifically focusing on detecting the occurrence of the predefined wake word. The whole process can be summarized as follows.</p>
-								<p>The wake word detector is initialized and loaded with the "alice.pmdl" model that was trained on a Docker training interface. It then starts capturing audio from the chosen audio input source (microphone).The wake word detector performs feature extraction on the audio frames to obtain acoustic features, in our case, we use a feature known as <a href="https://jonathan-hui.medium.com/speech-recognition-feature-extraction-mfcc-plp-5455f5a69dd9" target="_blank" rel="noopener noreferrer">Mel Frequency Cepstral Coefficients (MFCCs)</a>.The Deep Neural Network (DNN) feeds the MFCC features forward through its layers, performing calculations and activations in comparison to the fed-trained PMDL file. The output of the DNN is a probability score (on a scale of 0 to 1) that indicates the likelihood of the wake word "ALICE" being present in the current audio frame</p>
-								  <h2> SPEECH RECOGNITION</h2>
-								  <div style="display: flex; justify-content: center">
-									<dotlottie-player src="https://lottie.host/892f4fdc-3e26-4c40-ada1-9b68086fab6e/Zk2iy7soSd.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-								  </div>
-								<p>Upon the auditory detection of a designated wake word, such as "Hey Alice" or "Alice," the assistant initiates a sophisticated audio capture protocol, meticulously recording the subsequent vocal inputs. This listening state is underpinned by a robust acoustic processing framework that captures, segments, and streams the audio data to the Google Speech Recognition API, a cloud-based service renowned for its accuracy and efficiency in speech-to-text conversion.
-									Once the speech is transcribed, Alice processes the text through its sophisticated algorithms, which are designed to understand and execute the user's commands. This process involves analyzing the text to determine the intent behind the words and then engaging the appropriate modules or actions within the system</p>  
-									<h2> SPEAKING OUT</h2>
-									<div style="display: flex; justify-content: center">
-										<dotlottie-player src="https://lottie.host/70b46aea-451d-440d-8a8f-a53205d1f307/ktGWmYQF42.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-									  </div>
-									<p>Alice harnesses the advanced capabilities of Google's Text-to-Speech API to transform written text into lifelike, natural-sounding speech. This choice is pivotal for creating a more engaging user experience; while offline engines like PicoTTS and eSpeak offer functional speech synthesis, they often lack the fluidity and warmth of human speech, resulting in outputs that can seem mechanical and distant. In contrast, Google's solution is renowned for its ability to generate voice responses that closely mimic the intonation and rhythm of natural conversation. The API provides a rich selection of voices and languages, allowing Alice to deliver responses that are not only clear and accurate but also imbued with a human touch.</p>
+								<h2 class="major">TRANSISTORS</h2>
+								<span class="image main"><img src="images/npn.png" alt="Zuse Z3" /></span>
+								  
+								<p>A transistor is a semiconductor device used to amplify or switch electronic signals and electrical power. It is composed of semiconductor material, typically silicon, that can conduct electricity under certain conditions. Transistors are fundamental building blocks in modern electronic devices and are used in a wide range of applications, from amplifiers to switches, and in complex circuits like processors.
+
+									Key Functions of a Transistor:
+									Switching: Transistors can act as electronic switches, turning a current on or off.</p>
+								  <h2> TRANSISTOR AS A SWITCH</h2>
+								  <span class="image main"><img src="images/npnswitch.png" alt="Zuse Z3" /></span>
+								<p>One of the most fundamental applications of a transistor is using it to control the flow of power to another part of the circuit -- using it as an electric switch. Driving it in either cutoff or saturation mode, the transistor can create the binary on/off effect of a switch.When the voltage at the base is greater than 0.6V (or whatever your transistor's Vth might be), the transistor starts saturating and looks like a short circuit between collector and emitter. When the voltage at the base is less than 0.6V the transistor is in cutoff mode -- no current flows because it looks like an open circuit between C and E.</p>  
+									<h2> LOGIC GATES</h2>
+									
+									<p>Since transistors function as switches, we can utilize them to construct logic gates, as logic gates are essentially switches arranged in a specific configuration. By controlling the flow of current through a series of transistors, we can create fundamental logic gates such as AND, OR, and NOT gates, which are the building blocks of digital circuits. These logic gates can be combined to form more complex circuits, enabling the execution of a wide range of computational tasks. Thus, the versatility and switching capabilities of transistors make them ideal for creating the intricate networks of logic gates that power modern electronics and computing devices..</p>
+								
+									<h2> AND GATE</h2>
+									<span class="image main"><img src="images/AND.png" alt="Zuse Z3" /></span>
+									<h2> NOT GATE</h2>
+									<span class="image main"><img src="images/NOT.png" alt="Zuse Z3" /></span>
+									<h2> OR GATE</h2>
+									<span class="image main"><img src="images/OR.png" alt="Zuse Z3" /></span>
 								</article>
 
 						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
+							<article id="ALU">
+								<h2 class="major">ALU</h2>
+								<span class="image main"><img src="images/alu.png" alt="" /></span>
+								<p>
+									An Arithmetic Logic Unit (ALU) is a crucial component of a computer's central processing unit (CPU) responsible for executing arithmetic operations like addition, subtraction, multiplication, and division, as well as logical operations such as AND, OR, NOT, and XOR. It operates on binary inputs (operands) and produces outputs along with status flags that indicate specific conditions like zero result, negative result, overflow, or carry out. The ALU works closely with the CPU's control unit and registers to process instructions from programs, making it fundamental to the computer's ability to perform calculations and execute complex algorithms efficiently, thus playing a vital role in determining the computer's overall processing power and speed.</p>
+									<h2 class="major">MOST FUNDAMENTAL FUNCTION</h2>
+									
+									<p>
+										Addition and subtraction are the most fundamental operations in an ALU because they serve as the basis for many other arithmetic and logical operations. Multiplication can be performed as repeated addition, and division as repeated subtraction, while comparison operations can use subtraction to determine relative values. Logical shifts and rotations often involve addition and subtraction combined with bitwise operations. These operations are simpler and faster to implement in hardware, making them crucial for the overall performance of the CPU. Furthermore, many algorithms and data processing tasks rely on these basic operations, underpinning more complex computations and logical functions in digital systems..</p>
+										<h2> ADDER- SUBTRACTOR</h2>
+										<span class="image main"><img src="images/ADDSUBTRACT.png" alt="Zuse Z3" /></span>
+										<p>
+											An ALU can essentially be reduced to an adder-subtractor circuit because addition and subtraction are the core operations from which many other arithmetic and logical functions can be derived. By configuring an adder to also perform subtraction through methods like two's complement. 
+											We can achieve an ALU that performs both addition and subtraction using full adders and XOR gates by leveraging the properties of binary arithmetic. In an adder-subtractor circuit, full adders are used to sum the input bits along with any carry from the previous stage. To perform subtraction, we utilize the concept of two's complement, which involves inverting the bits of the number to be subtracted and adding one. This can be efficiently done using XOR gates, which invert each bit of the second operand when a control signal (indicating subtraction) is active. The XOR gates effectively toggle between passing the original bits (for addition) and their complements (for subtraction). The resulting bits are then fed into the full adders along with the addition of a 1 to the least significant bit position to complete the two's complement operation. This configuration allows the ALU to perform both addition and subtraction seamlessly by simply adjusting the control signal, making it a versatile and fundamental component of digital arithmetic.
+										</p>
+									</article>
 
 						<!-- Contact -->
 							<article id="makers">
